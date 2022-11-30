@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --gunmetal: #5E607A;
+    --darkspaceblue: #00001A;
+    --almostwhite: #FFFDFA;
+    --lightvermillion: #F15D51;
+    --yellow: #E9AA52;
+    --silver: #C5C6CE;
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+body {
+    font-family: Inter;
+    padding-inline: 165px;
+    padding-block: 89px 129px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.nav > ul {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    
+}
+
+.nav > ul > li > a {
+    text-decoration: none;
+    color: var(--gunmetal);
+}
+
+.nav > ul > li > a:hover {
+    cursor: pointer;
+    color: var(--lightvermillion);
+}
+
+/* main */
+/* big */
+
+.big {
+    display: grid;
+    grid-template-columns: 73fr 35fr;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.main-component {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-component > picture > img {
+    width: 100%;
+    display: block;
+}
+
+.main-component-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.main-component-content > h1 {
+    font-size: 56px;
+    line-height: 56px;
+    align-items: center;
+    color: var(--darkspaceblue);
+}
+
+.main-component-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 29px;
+}
+
+.main-component-details > p {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--gunmetal);
+}
+
+.main-component-details > button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    color: var(--almostwhite);
+    background: var(--lightvermillion);
+    padding-block: 13px 11px;
+    padding-inline: 31px 35px;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 4.375px;
+    width: 185px;
+}
+
+.main-component-details > button:hover {
+    cursor: pointer;
+    background: var(--darkspaceblue);
+}
+
+/* side-component */
+
+.side-component {
+    background: var(--darkspaceblue);
+    padding-inline: 24px;
+    padding-block: 32px 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 61px;
+}
+
+.side-component > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.side-component > div:first-of-type > h2 {
+    color: var(--yellow);
+    margin-bottom: 26px;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.side-component > div > h3 {
+    color: var(--almostwhite);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.side-component > div > h3:hover {
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.side-component > div > p {
+    color: var(--silver);
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.side-component > div:not(:last-of-type)::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+    background: var(--gunmetal);
+}
+
+/* small */
+
+.small {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 71px;
+}
+
+.small > div {
+    display: flex;
+    gap: 24px;
+}
+
+.small > div > img {
+    width: 100px;
+    height: 127px;
+    display: block;
+}
+
+.small > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small > div > div > h2 {
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--silver);
+}
+
+.small > div > div > h3 {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--darkspaceblue);
+}
+
+.small > div > div > h3:hover {
+    cursor: pointer;
+    color: var(--lightvermillion);
+}
+
+.small > div > div > p {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--gunmetal);
+}
+
+@media (max-width: 1200px) {
+    .small {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .small > div {
+        width: 100%;
+    }
+}
