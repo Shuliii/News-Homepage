@@ -61,6 +61,20 @@ header {
     color: var(--lightvermillion);
 }
 
+@media (max-width: 1024px) {
+    .logo {
+        width: 45px;
+        height: 28px;
+    }
+    .icon-menu {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
 /* main */
 /* big */
 
@@ -74,7 +88,7 @@ header {
 .main-component {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 28px;
 }
 
 .main-component > picture > img {
@@ -126,6 +140,25 @@ header {
 .main-component-details > button:hover {
     cursor: pointer;
     background: var(--darkspaceblue);
+}
+
+@media (max-width: 1024px) {
+    .big {
+        grid-template-columns: 1fr;
+        gap: 64px;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-component {
+        gap: 24px;
+    }
+
+    .main-component-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 /* side-component */
@@ -234,6 +267,7 @@ header {
     .small {
         grid-template-columns: 1fr;
         place-items: center;
+        margin-top: 64px;
     }
     .small > div {
         width: 100%;
