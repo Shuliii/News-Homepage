@@ -30,8 +30,14 @@
 
 body {
     font-family: Inter;
-    padding-inline: 165px;
-    padding-block: 89px 129px;
+    padding-inline: clamp(16px, 11.458vw, 165px);
+    padding-block: clamp(28px, 6.18vw, 89px) clamp(80px, 33.6vw, 129px);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-inline: clamp(16px, 4.2667vw, 88px);
+    }
 }
 
 header {
@@ -61,6 +67,10 @@ header {
     color: var(--lightvermillion);
 }
 
+.modal {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .logo {
         width: 45px;
@@ -70,8 +80,64 @@ header {
         display: flex;
     }
 
+    .icon-menu, .icon-menu-close {
+        cursor: pointer;
+    }
+    
     .nav {
         display: none;
+    }
+
+    .modal {
+        visibility: hidden;
+        z-index: 1;
+        position: fixed;
+        width: 68.2667vw;
+        top: 0;
+        right: 0;
+        background: white;
+        min-height: 100vh;
+        padding-top: 27.3px;
+        padding-inline: 24px 20.8px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -200px 1px 117px 111px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -200px 1px 117px 111px rgba(0,0,0,0.75);
+        -moz-box-shadow: -200px 1px 117px 111px rgba(0,0,0,0.75);
+    }
+
+    .icon-menu-close {
+        align-self: flex-end;
+        width: 30.41px;
+        height: 30.41px;
+    }
+
+    .modal > ul {
+        margin-top: 86.3px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .modal > ul > li > a {
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--darkspaceblue);
+        text-decoration: none;
+    }
+
+    .modal > ul > li > a:hover {
+        cursor: pointer;
+        color: var(--lightvermillion);
+    }
+
+    .active {
+        visibility: visible;
+    }
+
+    .noscroll {
+        overflow: hidden;
     }
 }
 
@@ -159,6 +225,10 @@ header {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+
+    .main-component-details {
+        gap: 24px;
+    }
 }
 
 /* side-component */
@@ -214,6 +284,18 @@ header {
     background: var(--gunmetal);
 }
 
+@media (max-width: 768px) {
+    .side-component {
+        padding-inline: 21px 20px;
+        padding-block: 24px;
+    }
+
+    .side-component > div:first-of-type > h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
 /* small */
 
 .small {
@@ -230,7 +312,7 @@ header {
 
 .small > div > img {
     width: 100px;
-    height: 127px;
+    height: 129px;
     display: block;
 }
 
@@ -268,6 +350,7 @@ header {
         grid-template-columns: 1fr;
         place-items: center;
         margin-top: 64px;
+        gap: 32px;
     }
     .small > div {
         width: 100%;

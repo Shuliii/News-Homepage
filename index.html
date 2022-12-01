@@ -7,26 +7,40 @@
     <title>News Homepage</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <img src="./images/logo.svg" alt="logo" class="logo">
-        <img src="./images/icon-menu.svg" alt="" class="icon-menu">
-        <div class="nav | fw-400">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Categories</a></li>
-            </ul>
+        
+        <div class="right-nav">
+            <div class="nav dropdown | fw-400">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            </div>
+            <img src="./images/icon-menu.svg" alt="" class="icon-menu">
         </div>
     </header>
+    <div class="modal">
+        <img src="./images/icon-menu-close.svg" alt="" class="icon-menu-close">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+        </ul>
+    </div>
     <main>
         <section class="big">
             <div class="main-component">
                 <picture>
-                    <source media="(max-width: 375px)" srcset="./images/image-web-3-mobile.jpg">
+                    <source media="(max-width: 480px)" srcset="./images/image-web-3-mobile.jpg">
                     <img src="./images/image-web-3-desktop.jpg">
                 </picture>
                 <div class="main-component-content">
