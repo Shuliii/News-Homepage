@@ -2,7 +2,6 @@ const iconMenu = document.querySelector('.icon-menu');
 const iconMenuClose = document.querySelector('.icon-menu-close');
 
 iconMenu.addEventListener('click', () => {
-    console.log('clicked')
     const modal = document.querySelector('.modal');
     const body = document.querySelector('body')
     modal.classList.add('active');
@@ -11,5 +10,7 @@ iconMenu.addEventListener('click', () => {
 
 iconMenuClose.addEventListener('click', () => {
     const modal = document.querySelector('.modal');
+    const body = document.querySelector('body')
     modal.classList.remove('active')
+    body.classList.remove('noscroll')
 })
